@@ -16,7 +16,7 @@ spec:
           - name: apache
             image: httpd:2.4
             ports:
-              - containerPort: 80
+              - containerPort: 8082
             resources:
               requests:
                 memory: "64Mi"
@@ -35,6 +35,5 @@ spec:
     app: apache
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80
-
+      port: 8082
+      targetPort: 8082
