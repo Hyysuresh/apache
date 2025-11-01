@@ -3,7 +3,7 @@ apiVersion: apps/v1
 metadata:
   name: apache-deployment 
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
         app: apache 
