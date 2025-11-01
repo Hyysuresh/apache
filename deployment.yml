@@ -16,14 +16,7 @@ spec:
           - name: apache
             image: httpd:2.4
             ports:
-              - containerPort: 8082
-            resources:
-              requests:
-                memory: "64Mi"
-                cpu: "256m"
-              limits:
-                memory: "128Mi"
-                cpu: "512m"
+              - containerPort: 80
 ---
 
 kind: Service
@@ -35,5 +28,5 @@ spec:
     app: apache
   ports:
     - protocol: TCP
-      port: 8082
-      targetPort: 8082
+      port: 80
+      targetPort: 80
