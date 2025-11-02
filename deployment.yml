@@ -23,7 +23,7 @@ spec:
           - name: apache
             image: httpd:2.4
             ports:
-              - containerPort: 80
+              - containerPort: 8080
 ---
 
 kind: Service
@@ -36,5 +36,5 @@ spec:
     app: apache
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80
+      port: 8080
+      targetPort: 8080
