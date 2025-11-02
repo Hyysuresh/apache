@@ -1,7 +1,14 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+   name: apache
+
+---
 kind: Deployment
 apiVersion: apps/v1
 metadata:
   name: apache-deployment 
+  namespace: apache
 spec:
   replicas: 1
   selector:
@@ -23,6 +30,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: apache-service 
+  namespace: apache
 spec:
   selector:
     app: apache
